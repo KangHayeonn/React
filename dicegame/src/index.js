@@ -1,3 +1,4 @@
+/*
 import { Fragment } from 'react'; // <></> 이렇게 사용할 시 import 안해도 됨
 import ReactDOM from 'react-dom';
 
@@ -29,8 +30,8 @@ ReactDOM.render(
   <button className="hand" onClick={handleClick}>보</button>
   </>,
   document.getElementById('root')
-);
-
+);*/
+////////////////////////////////////////////////////////
 /*<p className="hello">안녕 리액트!</p>*/
   //jsx문법 : 여러단어가 조합된 속성명은 camel case로 작성
   /*
@@ -66,3 +67,10 @@ ReactDOM.render(
 
   // ** jsx 문법에서 {} 중괄호를 이용해 JS의 표현식을 사용할 수 있음 
   // ** but 중괄호 안에 if,for,함수 선언과 같은 JS 문장은 사용 불가능
+
+
+  // 2021-08-31
+  import ReactDOM from "react-dom";
+  import App from './App';
+
+  ReactDOM.render(<App/>, document.getElementById('root'));
