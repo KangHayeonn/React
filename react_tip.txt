@@ -8,3 +8,9 @@ npm init react-app .                 : 현재 폴더에서 리액트 프로젝�
 npm run start                         : 개발 모드 실행
 
 Ctrl+C                                  : 개발 모드 종료
+
+** git clone 받고 npm run 했는데 ELIFECYCLE 오류 발생했을 시에는
+(1) npm cache clean --force (cache를 강제 clean 하고)
+(2) rm -rf node_modules package-lock.json (node_modules디렉터리와 package-lock.json 삭제)
+(3) npm install (다시 npm install)
+-> 위의 과정을 수행하면 문제 해결 가능 !
