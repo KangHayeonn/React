@@ -72,5 +72,8 @@ ReactDOM.render(
   // 2021-08-31
   import ReactDOM from "react-dom";
   import App from './App';
+  
+  //2021-09-15
+  import './index.css';
 
   ReactDOM.render(<App/>, document.getElementById('root'));
