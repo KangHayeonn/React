@@ -1,7 +1,8 @@
 import Dice from "./Dice";
 
-function Board({name, color, num, sum, gameHistory}){ //F2 누르면 이름 변경 가능
-
+function Board({name, color, gameHistory}){ //F2 누르면 이름 변경 가능
+    const num = gameHistory[gameHistory.length-1] || 1;
+    const sum = gameHistory.reduce((a, b) => a+b, 0);
     return (
         <div>
             <h2>{name}</h2>
