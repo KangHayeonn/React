@@ -1,0 +1,23 @@
+npm run build : build된 폴더를 웹서버로 제공하면 프로젝트가 배포되는 것을 의미
+
+** build : 브라우저가 해석할 수 있고 웹서버가 사용하기 좋도록 만드는 과정
+
+npx serve build
+: 코드가 잘 동작하는지 확인, 로컬환경에서 웹서버를 실행
+: 로컬과 같은 공유기를 공유하는 사람까지 프로그램 공유 가능
+
+* 프로젝트 생성하기
+npm init react-app 
+
+* 개발모드 실행하기 - 개발 모드 서버 실행
+npm start (npm run start) 
+
+* 실행 중인 서버 종료하기
+ctrl + c
+
+* 개발된 프로젝트 빌드하기
+npm run build
+
+* 빌드한 것 로컬에서 실행하기
+npx serve build
+
