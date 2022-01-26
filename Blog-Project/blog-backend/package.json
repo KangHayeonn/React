@@ -5,18 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src",
+    "start": "node -r esm src",
     "start:dev": "nodemon --watch src/ src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^14.3.2",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
+    "esm": "^3.2.25",
+    "joi": "^17.5.0",
+    "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.1.1",
+    "mongoose": "^6.1.8",
     "nodemon": "^2.0.15"
   }
 }
