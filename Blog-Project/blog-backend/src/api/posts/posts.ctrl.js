@@ -83,7 +83,7 @@ export const write = async (ctx) => {
 };
 
 /* 포스트 목록 조회
- * GET /api/posts
+ * GET /api/posts?username=&tag=&page=
  */
 
 export const list = async (ctx) => {
@@ -96,14 +96,21 @@ export const list = async (ctx) => {
     return;
   }
 
+  const { tag, username } = ctx.query;
+  // tag, username 값이 유효하면 객체 안에 넣고, 그렇지 않으면 넣지 않음
+  const query = {
+    ...(username ? { "user.username" : username} : {}),
+    ...(tag ? { tags: tag} : {}),
+  };
+
   try {
-    const posts = await Post.find()
+    const posts = await Post.find(query)
       .sort({ _id: -1 })
       .limit(10)
       .skip((page - 1) * 10)
       .exec();
     // 커스텀 헤더에 마지막 페이지 번호 출력
-    const postCount = await Post.countDocuments().exec();
+    const postCount = await Post.countDocuments(query).exec();
     ctx.set('Last-Page', Math.ceil(postCount / 10)); // 첫 번째 파라미터 : key, 두 번째 파라미터 : value
     ctx.body = posts
       .map((post) => post.toJSON())
