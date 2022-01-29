@@ -1,13 +1,15 @@
 import React from 'react';
 import AuthTemplate from '../components/auth/AuthTemplate';
-import AuthForm from '../components/auth/AuthForm';
+import RegisterForm from '../containers/auth/RegisterForm';
 
 // 회원가입
 
 const RegisterPage = () => {
     return (
         <div>
-            <AuthTemplate><AuthForm type="register" /></AuthTemplate>
+            <AuthTemplate>
+                <RegisterForm />
+            </AuthTemplate>
         </div>
     );
 };

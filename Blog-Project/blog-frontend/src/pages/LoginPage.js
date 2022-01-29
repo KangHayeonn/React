@@ -1,13 +1,15 @@
 import React from 'react';
 import AuthTemplate from '../components/auth/AuthTemplate';
-import AuthForm from '../components/auth/AuthForm';
+import LoginForm from '../containers/auth/LoginForm';
 
 // 로그인
 
 const LoginPage = () => {
     return (
         <div>
-            <AuthTemplate><AuthForm type="login" /></AuthTemplate>
+            <AuthTemplate>
+                <LoginForm />
+            </AuthTemplate>
         </div>
     );
 };
