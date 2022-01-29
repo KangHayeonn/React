@@ -1,10 +1,18 @@
 import React from 'react';
+import Editor from '../components/write/Editor';
+import TagBox from '../components/write/TagBox';
+import WriteActionButtons from '../components/write/WriteActionButtons';
+import Responsive from '../components/common/Responsive';
+
+// 글쓰기
 
 const WritePage = () => {
     return (
-        <div>
-            글쓰기
-        </div>
+        <Responsive>
+            <Editor />
+            <TagBox />
+            <WriteActionButtons />
+        </Responsive>
     );
 };
 
