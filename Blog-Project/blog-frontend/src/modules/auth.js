@@ -1,6 +1,6 @@
 import { createAction, handleActions } from "redux-actions";
 import produce from "immer";
-import { takeLatest } from "reudx-saga/effects";
+import { takeLatest } from "redux-saga/effects";
 import createRequestSaga, { createRequestActionTypes } from "../lib/createRequestSaga";
 import * as authAPI from "../lib/api/auth";
 
