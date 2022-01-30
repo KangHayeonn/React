@@ -1,8 +1,8 @@
 import React from 'react';
-import WriteActionButtons from '../components/write/WriteActionButtons';
 import Responsive from '../components/common/Responsive';
 import EditorContainer from '../containers/write/EditorContainer';
 import TagBoxContainer from '../containers/write/TagBoxContainer';
+import WriteActionButtonsContainer from "../containers/write/WriteActionButtonsContainer";
 
 // 글쓰기
 
@@ -11,7 +11,7 @@ const WritePage = () => {
         <Responsive>
             <EditorContainer />
             <TagBoxContainer />
-            <WriteActionButtons />
+            <WriteActionButtonsContainer />
         </Responsive>
     );
 };
