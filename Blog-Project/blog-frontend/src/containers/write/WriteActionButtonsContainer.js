@@ -10,7 +10,7 @@ const WriteActionButtonsContainer = ({ history }) => {
         title: write.title,
         body: write.body,
         tags: write.tags,
-        post: write.psot,
+        post: write.post,
         postError: write.postError,
     }));
     
