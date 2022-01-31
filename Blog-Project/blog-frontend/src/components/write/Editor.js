@@ -64,6 +64,23 @@ const Editor = ({ title, body, onChangeField }) => {
         });
     }, [onChangeField]);
 
+    // 컴포넌트가 화면에 마운트되고 나서 단 한 번만 useEffect에 등록한 작업이 실행되도록 설정
+    // 방법 1 : useRef 사용
+    /*
+    const mounted = useRef(false);
+    useEffect(() => {
+        if(mounted.current) return;
+        mounted.current = true;
+        quillInstance.current.root.innerHTML = body;
+    }, [body]); */
+
+
+    // 컴포넌트가 화면에 마운트되고 나서 단 한 번만 useEffect에 등록한 작업이 실행되도록 설정
+    // 방법 2 : 해당 줄만 ESLint 규칙 비활성화
+    useEffect(() => {
+        quillInstance.current.root.innerHTML = body;
+    }, []); /* eslint-disable-line */
+
     const onChangeTitle = e => {
         onChangeField({ key: "title", value: e.target.value });
     }
