@@ -23,6 +23,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^10.1.1",
     "mongoose": "^6.1.8",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "sanitize-html": "^2.6.1"
   }
 }
